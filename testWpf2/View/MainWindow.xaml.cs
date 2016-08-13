@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using testWpf2.ViewModel;
 
-namespace testWpf2
+namespace testWpf2.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

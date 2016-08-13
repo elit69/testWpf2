@@ -8,7 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
         <Label>Customer Name:</Label>
-        <TextBox Width="136" Text="{Binding customer.name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <TextBox Width="136" Text="{Binding customer.name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"></TextBox>
         <Button Command="{Binding updateCommand}">Update</Button>        
     </StackPanel>
 </Window>

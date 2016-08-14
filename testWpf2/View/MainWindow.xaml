@@ -3,12 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:local="clr-namespace:testWpf2"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
         <Label>Customer Name:</Label>
         <TextBox Width="136" Text="{Binding customer.name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"></TextBox>
-        <Button Command="{Binding updateCommand}">Update</Button>        
+        <Button>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseEnter" >
+                    <i:InvokeCommandAction Command="{Binding updateCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers> Update</Button>        
     </StackPanel>
 </Window>

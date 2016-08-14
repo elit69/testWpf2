@@ -13,5 +13,9 @@ namespace testWpf2.View
             InitializeComponent();
             this.DataContext = new CustomerViewModel();
         }
+
+        private void Button_Click ( object sender, RoutedEventArgs e ) {
+
+        }
     }
 }
